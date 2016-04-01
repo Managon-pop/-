@@ -53,7 +53,6 @@ class rittai extends PluginBase implements Listener{
         $this->c = 0;
           $pos2 = new Vector3($pos->x, $pos->y + 1, $pos->z);
           $block2 = $level->getBlock($pos2);
-          var_dump($block2);
           if($block2->getId() === 0){
             $this->teleC($player, $pos2);
           }else{
@@ -89,7 +88,6 @@ class rittai extends PluginBase implements Listener{
       $z = sin(deg2rad($yaw))*$this->speed;
       $dt = ($x**2 + $z**2)**(0.5);
       $y = tan(deg2rad(-$pitch))*$dt;
-      var_dump($y);
       $px = $player->x;
       $py = $player->y;
       $pz = $player->z;
